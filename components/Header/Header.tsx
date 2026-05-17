@@ -13,13 +13,25 @@ const Header = () => {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/tutorialNextJS">Учебник NextJS</Link>
+            <Link href="/tutorialNextJS">Підручник</Link>
           </li>
           <li>
             <Link href="/advancedRouting">Роутинг</Link>
           </li>
           <li>
-            <Link href="/profile">Импорты</Link>
+            <Link href="/importsNext">Iмпорти</Link>
+          </li>
+          <li>
+            <Link href="/layoutsNext">Макети</Link>
+          </li>
+          <li>
+            <Link href="/navigation">Навігація</Link>
+          </li>
+          <li>
+            <Link href="/styling">Стилізація</Link>
+          </li>
+          <li>
+            <Link href="/practice">Практика</Link>
           </li>
         </ul>
       </nav>
