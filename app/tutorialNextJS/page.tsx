@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const TutorialNextJS = () => {
   return (
     <div>
@@ -111,13 +113,12 @@ const TutorialNextJS = () => {
       </p>
       <ul>
         <li>
-          {" "}
           <h4>№1⊗jsnxPmBsRT</h4>
           <p>Расскажите, какие преимущества и недостатки есть у SSR.</p>
+          <Link href="/tutorialNextJS/typesRendering">Відповідь</Link>
         </li>
 
         <li>
-          {" "}
           <h4>№2⊗jsnxPmBsRT</h4>
           <p>Расскажите, какие преимущества и недостатки есть у CSR.</p>
         </li>
@@ -183,29 +184,17 @@ export default function Test() {
 			<p>hello, {name}!</p>
 		</div>
 	);
-}`}
+}
+`}
         </code>
       </pre>
     </div>
   );
 };
-
 export default TutorialNextJS;
 
-// ************************************
 {
-  /*
-
-
-
-
-
-
-
-
-
-
-
+  /*/
 
 Чтобы объявить компонент серверным, в начале файла компонента нужно написать специальную директиву 'use server'. Вот пример кода серверного компонента:
 
