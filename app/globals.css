@@ -121,3 +121,31 @@ li:hover {
   background: rgba(0, 229, 255, 0.1);
   border-left-color: #ff3d00;
 }
+pre {
+  background-color: #111827;
+  color: #22c55e;
+  padding: 16px;
+  border-radius: 12px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 16px;
+}
+
+code {
+  font-family: Consolas, monospace;
+}
+ol {
+  padding-left: 24px;
+  margin-top: 16px;
+  line-height: 1.8;
+}
+
+ol li {
+  margin-bottom: 8px;
+  color: #e5e7eb;
+}
+strong {
+  font-weight: 800;
+  color: #bfc3ff;
+}
