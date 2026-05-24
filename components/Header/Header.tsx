@@ -33,6 +33,9 @@ const Header = () => {
           <li>
             <Link href="/practice">Практика</Link>
           </li>
+          <li>
+            <Link href="/examples">Приклади</Link>
+          </li>
         </ul>
       </nav>
     </header>
