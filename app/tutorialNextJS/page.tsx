@@ -789,6 +789,56 @@ export default Products;
         </li>
       </ol>{" "}
       {/* ================================================================================= */}
+      <h2>Клієнтські компоненти у фреймворку NextJS</h2>
+      <p>
+        Давайте теперь переделаем наш серверный компонент на клиентский. Для
+        этого напишем в начале файла компонента директиву `use client`:
+      </p>
+      <pre>
+        <code>{`
+      'use client';
+
+export default function Test() {
+	return <h1>hello, user!</h1>;
+}
+Теперь нам станут доступны стейты, создаваемые через useState. Давайте для примера создадим стейт и выведем его содержимое в верстке:
+
+'use client';
+
+import { useState } from 'react';
+
+export default function Test() {
+	let [name, setName] = useState('user');
+	return <h1>hello, {name}!</h1>;
+}
+      `}</code>
+      </pre>
+      <ol>
+        <li>
+          <h3
+            onClick={() => setOpenIndex(openIndex === 16 ? null : 16)}
+            style={{ cursor: "pointer" }}
+          >
+            Сделайте клиентский компонент с двумя инпутами и кнопкой. Пусть в
+            инпуты вводятся числа. По нажатию на кнопку выведите в абзац сумму
+            введенных чисел.
+          </h3>
+          {openIndex === 16 && (
+            <p>ffffffffffffffffffff пfffffffffffffffffffff</p>
+          )}
+        </li>
+        <li>
+          <h3
+            onClick={() => setOpenIndex(openIndex === 17 ? null : 17)}
+            style={{ cursor: "pointer" }}
+          >
+            Уберите директиву `use client`. Убедитесь, что в этом случае NextJS
+            выдаст ошибку про причине того, что нельзя использовать стейты
+            внутри серверных компонентов.
+          </h3>
+          {openIndex === 17 && <p>fffffffffffffffff</p>}
+        </li>
+      </ol>
       {/* ================================================================================= */}
     </div>
   );
@@ -801,7 +851,7 @@ export default TutorialNextJS;
   /*
 
 
-Клиентские компоненты в фреймворке NextJS
+
 Давайте теперь переделаем наш серверный компонент на клиентский. Для этого напишем в начале файла компонента директиву 'use client':
 
 'use client';
