@@ -30,7 +30,11 @@ export default function RootLayout({
         <main>{children}</main>
         <footer>
           <p>
-            Created <time dateTime="2026">2026</time>
+            Created{" "}
+            <time dateTime="2026">
+              2026 <br />
+              Andrii
+            </time>
           </p>
         </footer>
       </body>
