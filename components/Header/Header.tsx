@@ -13,7 +13,7 @@ const Header = () => {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/tutorialNextJS">Підручник</Link>
+            <Link href="/tutorialNextJS">Основи</Link>
           </li>
           <li>
             <Link href="/advancedRouting">Роутинг</Link>
