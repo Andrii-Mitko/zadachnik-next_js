@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 const AdvancedRouting = () => {
-  const [open, setOpen] = useState(false);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   return (
     <div>
       <h2>Розширені можливості роботи з маршрутизацією в NextJS</h2>
@@ -26,19 +26,23 @@ const AdvancedRouting = () => {
         <strong> / </strong>.
       </p>
       <p>
-        За цей URL відповідає файл <strong>src/app/page.jsx</strong>, який вже є
-        за замовчуванням після встановлення фреймворку.
+        За цей URL відповідає файл <strong>app/page.tsx</strong>, який вже є за
+        замовчуванням після встановлення фреймворку.
       </p>
       <ol>
         <li>
-          <h3 onClick={() => setOpen(!open)} style={{ cursor: "pointer" }}>
+          <h3
+            onClick={() => setOpenIndex(openIndex === 19 ? null : 19)}
+            style={{ cursor: "pointer" }}
+          >
             Зробіть так, щоб при зверненні за адресою <strong> / </strong> у
             браузері з`являлося якесь повідомлення.
           </h3>
 
-          {open && (
+          {openIndex === 19 && (
             <pre>
               <code>{`
+              app/page.tsx
 const Page = () => {
   return <div>Page</div>;
 };
@@ -49,6 +53,7 @@ export default Page;
           )}
         </li>
       </ol>
+
       {/* ============================================================================== */}
       <h2>Вкладені маршрути в NextJS</h2>
       <p>
@@ -61,39 +66,35 @@ export default Page;
       </p>
       <pre>
         <code>{`
-/app/
-/user/
-/show/
-/name/
-page.tsx
+app/user/show/name/page.tsx
 `}</code>
       </pre>
       <p>Давайте створимо відповідний файл:</p>
 
       <pre>
         <code>{`
-export default function Name() {
+const Name = () => {
 	return <p>
 		user
 	</p>;
-}
+};
+  export default Name;
 `}</code>
       </pre>
       <ol>
         <li>
-          <h3 onClick={() => setOpen(!open)} style={{ cursor: "pointer" }}>
+          <h3
+            onClick={() => setOpenIndex(openIndex === 20 ? null : 20)}
+            style={{ cursor: "pointer" }}
+          >
             Створіть файл, який відображає сторінку за таким URL-адресою:{" "}
             <strong> /catg/prod/name</strong>.
           </h3>
 
-          {open && (
+          {openIndex === 20 && (
             <pre>
               <code>{`
-/app/
-/catg/
-/prod/
-/name/
-page.tsx
+app/catg/prod/name/page.tsx
 
 const Name = () => {
   return <div>Name</div>;
@@ -118,7 +119,7 @@ export default Name;
         У цьому випадку нам не потрібно створювати безліч папок для кожного
         можливого числа. Достатньо оголосити цю частину адреси динамічною. У
         цьому випадку всі запити такого виду оброблятиме загальний файл
-        page.jsx.
+        page.tsx.
       </p>
       <p>
         Для того, щоб зробити динамічний параметр, потрібно ім`я відповідної
@@ -127,74 +128,91 @@ export default Name;
       </p>
       <pre>
         <code>{`
-/app/
-/users/
-/[id]/
+app/users/[id]/
       `}</code>
       </pre>
       <p>Давайте створимо відповідний компонент:</p>
       <pre>
         <code>{`
-export default function User() {
+const User() {
 	return <p>
 		user
 	</p>;
 }
+  export default User;
       `}</code>
       </pre>
       <p>
-        При цьому заданий нами параметр зберігатиметься у спеціальному об’єкті
+        При цьому заданий нами параметр зберігатиметься у спеціальному об`єкті
         params. Давайте виведемо значення цього параметра:
       </p>
       <pre>
         <code>{`
-export default function User({ params }) {
+const User({ params }) {
 	return <p>
 		user {params.id}
 	</p>;
 }
+export default User;
       `}</code>
       </pre>
       <ol>
         <li>
-          <h3 onClick={() => setOpen(!open)} style={{ cursor: "pointer" }}>
-            Сделайте роут, обрабатывающий адреса вида /city/:name, где вместо
-            :name может быть любая строка.
+          <h3
+            onClick={() => setOpenIndex(openIndex === 21 ? null : 21)}
+            style={{ cursor: "pointer" }}
+          >
+            Створіть маршрут, який обробляє адреси у форматі{" "}
+            <strong>/city/:name</strong>, де замість :name може бути будь-який
+            рядок.
           </h3>
 
-          {open && (
+          {openIndex === 21 && (
             <pre>
               <code>{`
-/app/
-
+app/
+└── city/
+    └── [name]/
+        └── page.tsx
 `}</code>
             </pre>
           )}
         </li>
         <li>
-          <h3 onClick={() => setOpen(!open)} style={{ cursor: "pointer" }}>
-            Сделайте роут, обрабатывающий адреса вида /show/:country/:city, где
-            вместо :country и :city могут быть любые строки.
+          <h3
+            onClick={() => setOpenIndex(openIndex === 22 ? null : 22)}
+            style={{ cursor: "pointer" }}
+          >
+            Створіть маршрут, який обробляє адреси типу{" "}
+            <strong>/show/:country/:city</strong>, де замість{" "}
+            <strong>:country</strong> та <strong>:city</strong> можуть бути
+            будь-які рядки.
           </h3>
 
-          {open && (
+          {openIndex === 22 && (
             <pre>
               <code>{`
-/app/
-
+app/
+└── show/
+    └── [country]/
+        └── [city]/
+            └── page.tsx
 `}</code>
             </pre>
           )}
         </li>
         <li>
-          <div onClick={() => setOpen(!open)} style={{ cursor: "pointer" }}>
+          <div
+            onClick={() => setOpenIndex(openIndex === 23 ? null : 23)}
+            style={{ cursor: "pointer" }}
+          >
             <h3>
-              Сделайте роут, обрабатывающий адреса вида /post/:id, где вместо
-              :id может быть любое число.
+              Створіть маршрут, який обробляє адреси типу /post/:id, де замість
+              :id може бути будь-яке число.
             </h3>
             <pre>
               <code>{`
-Пусть дан следующий массив:
+Нехай маємо такий масив:
 
 let posts = [
 	'post1',
@@ -210,21 +228,52 @@ export default function Post() {
 `}</code>
             </pre>
             <p>
-              Сделайте так, чтобы в зависимости от значения параметра id в
-              верстке компонента выводился соответствующий пост.
+              Зробіть так, щоб залежно від значення параметра id у верстці
+              компонента відображався відповідний допис.
             </p>
           </div>
 
-          {open && (
+          {openIndex === 23 && (
             <pre>
               <code>{`
-let prods 
+app\examples\post\page.tsx
+
+import Link from "next/link";
+
+const Post = () => {
+  return (
+    <div>
+      {" "}
+      <ul>
+        <li>
+          <Link href="/examples/post/all">Post</Link>
+        </li>
+        <li>
+          <Link href="/examples">Назад</Link>
+        </li>
+        <li>
+          <Link href="/">На Головну</Link>
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+export default Post;
+
+app\examples\post\[id]\page.tsx
+
+
+
 `}</code>
             </pre>
           )}
         </li>
         <li>
-          <div onClick={() => setOpen(!open)} style={{ cursor: "pointer" }}>
+          <div
+            onClick={() => setOpenIndex(openIndex === 24 ? null : 24)}
+            style={{ cursor: "pointer" }}
+          >
             <h3>
               Сделайте роут, обрабатывающий адреса вида /prod/:id, где вместо
               :id может быть любое число.
@@ -262,7 +311,7 @@ export default function Prod() {
             </p>
           </div>
 
-          {open && (
+          {openIndex === 24 && (
             <pre>
               <code>{`
 /app/

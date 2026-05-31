@@ -16,7 +16,7 @@ const Header = () => {
             <Link href="/tutorialNextJS">Основи</Link>
           </li>
           <li>
-            <Link href="/advancedRouting">Роутинг</Link>
+            <Link href="/advancedRouting">Маршрутизація</Link>
           </li>
           <li>
             <Link href="/importsNext">Iмпорти</Link>
