@@ -9,7 +9,10 @@ const Post = () => {
           <Link href="/examples/post/all">Post</Link>
         </li>
         <li>
-          <Link href="/examples">Назад</Link>
+          <Link href="/examples">Приклади</Link>
+        </li>
+        <li>
+          <Link href="/advancedRouting">Маршрутизація</Link>
         </li>
         <li>
           <Link href="/">На Головну</Link>

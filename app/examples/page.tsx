@@ -56,6 +56,9 @@ const Test = () => {
           <Link href="/examples/post">Post</Link>
         </li>
         <li>
+          <Link href="/examples/prod">Prod</Link>
+        </li>
+        <li>
           <Link href="/">На Головну</Link>
         </li>
       </ul>

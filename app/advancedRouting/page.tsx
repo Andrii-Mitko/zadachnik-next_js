@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 
 const AdvancedRouting = () => {
@@ -233,41 +234,7 @@ export default function Post() {
             </p>
           </div>
 
-          {openIndex === 23 && (
-            <pre>
-              <code>{`
-app\examples\post\page.tsx
-
-import Link from "next/link";
-
-const Post = () => {
-  return (
-    <div>
-      {" "}
-      <ul>
-        <li>
-          <Link href="/examples/post/all">Post</Link>
-        </li>
-        <li>
-          <Link href="/examples">Назад</Link>
-        </li>
-        <li>
-          <Link href="/">На Головну</Link>
-        </li>
-      </ul>
-    </div>
-  );
-};
-
-export default Post;
-
-app\examples\post\[id]\page.tsx
-
-
-
-`}</code>
-            </pre>
-          )}
+          {openIndex === 23 && <Link href="/examples/post">Post</Link>}
         </li>
         <li>
           <div
@@ -275,8 +242,9 @@ app\examples\post\[id]\page.tsx
             style={{ cursor: "pointer" }}
           >
             <h3>
-              Сделайте роут, обрабатывающий адреса вида /prod/:id, где вместо
-              :id может быть любое число.
+              Створіть маршрут, який обробляє адреси типу{" "}
+              <strong>/prod/:id</strong>, де замість
+              <strong>:id</strong> може бути будь-яке число.
             </h3>
             <pre>
               <code>{`
