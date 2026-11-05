@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Practice — Zadachnik
 
-## Getting Started
+A practical learning project focused on exploring Next.js fundamentals, App Router, routing, layouts, navigation, and styling.
 
-First, run the development server:
+The project contains tutorials, code examples, and practical exercises designed to strengthen Next.js development skills.
+
+## 🚀 Demo
+
+[**Live Demo — zadachnik-next-js.vercel.app**](https://zadachnik-next-js.vercel.app/)
+
+## 🛠 Tech Stack
+
+- **Next.js 16** — React framework
+- **React 19** — UI library
+- **TypeScript 5** — Static typing
+- **CSS Modules** — Component-level styling
+- **ESLint** — Code quality
+- **Prettier** — Code formatting
+- **Vercel** — Deployment
+
+## ✨ Features
+
+- Next.js fundamentals and introduction to the framework
+- App Router and file-based routing
+- Nested and dynamic routes
+- Advanced routing techniques
+- Navigation with Next.js Link component
+- Shared layouts and reusable components
+- Absolute imports and path aliases
+- Global CSS and CSS Modules
+- Practical examples with posts and products
+- Interactive exercises with expandable code solutions
+
+## 📂 Project Structure
+
+```text
+zadachnik-next_js/
+├── app/
+│   ├── advancedRouting/
+│   ├── examples/
+│   │   ├── post/
+│   │   │   └── [id]/
+│   │   └── prod/
+│   │       └── [id]/
+│   ├── importsNext/
+│   ├── layoutsNext/
+│   ├── navigation/
+│   ├── practice/
+│   ├── styling/
+│   ├── tutorialNextJS/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   └── Header/
+│       ├── Header.module.css
+│       └── Header.tsx
+├── public/
+├── package.json
+└── tsconfig.json
+```
+
+## ⚙️ Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Andrii-Mitko/zadachnik-next_js.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd zadachnik-next_js
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📜 Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command         | Description                      |
+| --------------- | -------------------------------- |
+| `npm run dev`   | Start development server         |
+| `npm run build` | Build the production application |
+| `npm run start` | Start production server          |
+| `npm run lint`  | Run ESLint                       |
 
-## Learn More
+## 🎯 Learning Goals
 
-To learn more about Next.js, take a look at the following resources:
+- Understand Next.js architecture and App Router.
+- Build applications using file-based routing.
+- Work with dynamic route parameters.
+- Understand server and client components.
+- Implement reusable layouts and navigation.
+- Organize project files and components.
+- Apply different styling approaches.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 👨‍💻 Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Andrii Mitko**
 
-## Deploy on Vercel
+Junior Full-Stack Developer
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- GitHub: [@Andrii-Mitko](https://github.com/Andrii-Mitko)
+- Portfolio: [andrii-mitko-brand.vercel.app](https://andrii-mitko-brand.vercel.app/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+_Built as part of my ongoing journey in Full-Stack Web Development._
